@@ -1,0 +1,54 @@
+.footer {
+  border-top: 1px solid #cac9c9;
+  background: #ffffff;
+  padding: 8px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+
+  .menu {
+    width: 95%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+
+    text-align: center;
+    font-size: 20px;
+
+    @include media(sm) {
+      width: 100%;
+      font-size: 18px;
+    }
+
+    @include orientation(landscape) {
+      width: 100%;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .menu::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  .more {
+    position: fixed;
+    right: 8px;
+    bottom: 12px;
+    color: #d6d6d6;
+
+    @include media(sm) {
+      display: none;
+    }
+
+    @include orientation(landscape) {
+      display: none;
+    }
+  }
+}

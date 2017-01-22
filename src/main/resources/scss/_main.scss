@@ -1,0 +1,32 @@
+.btn-assist {
+  padding-top: 10px;
+  text-align: right;
+}
+
+.actionable {
+  margin-top: 64px;
+  text-align: center;
+
+  padding-bottom: 42px;
+
+  @include media(sm) {
+    padding-bottom: 46px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .btn {
+    min-width: 240px;
+  }
+
+  .table {
+    text-align: left;
+    background: rgba(167, 182, 247, 0.18);
+  }
+
+  .ico-lg {
+    font-size: 72px;
+  }
+}

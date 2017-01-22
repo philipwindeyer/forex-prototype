@@ -1,0 +1,44 @@
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  bottom: 20px;
+  background-color: rgb(209, 209, 209); // Colour fallback
+  background-color: rgba(209, 209, 209, 0.9); // With Opacity
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  transition: 0.5s;
+
+  a {
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+    &:hover, &:focus {
+      color: #f1f1f1;
+    }
+  }
+
+  .btn-overlay-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 64px;
+    width: 100%;
+    padding-bottom: 42px;
+
+    @include media(sm) {
+      padding-bottom: 46px;
+    }
+  }
+}

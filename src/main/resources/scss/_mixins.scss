@@ -1,0 +1,56 @@
+// Breakpoints
+@mixin media($point) {
+  $sm: "(min-width: 768px)";
+  $md: "(min-width: 992px)";
+  $lg: "(min-width: 1200px)";
+
+  @if $point == sm {
+    @media #{$sm} {
+      @content;
+    }
+  } @else if $point == md {
+    @media #{$md} {
+      @content;
+    }
+  } @else if $point == lg {
+    @media #{$lg}  {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin orientation($orientation) {
+  $portrait: "screen and (orientation: portrait)";
+  $landscape: "screen and (orientation: landscape)";
+
+  @if $orientation == portrait {
+    @media #{$portrait} {
+      @content;
+    }
+  } @else if $orientation == landscape {
+    @media #{$landscape} {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  -moz-border-radius-topleft: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-radius: $radius;
+}

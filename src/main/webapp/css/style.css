@@ -8529,10 +8529,10 @@ html, body {
 .actionable {
   margin-top: 64px;
   text-align: center;
-  padding-bottom: 42px; }
+  padding-bottom: 64px; }
   @media (min-width: 768px) {
     .actionable {
-      padding-bottom: 46px; } }
+      padding-bottom: 68px; } }
   .actionable h1 {
     font-size: 36px; }
   .actionable .btn {
@@ -8542,6 +8542,13 @@ html, body {
     background: rgba(167, 182, 247, 0.18); }
   .actionable .ico-lg {
     font-size: 72px; }
+  .actionable .box-info {
+    padding: 8px;
+    border: 1px solid #cac9c9;
+    background-color: #fff;
+    text-align: left; }
+  .actionable .btn-danger {
+    color: #FFFFFF; }
 
 .overlay {
   height: 0;

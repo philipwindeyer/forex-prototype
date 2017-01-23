@@ -5,11 +5,16 @@ import java.text.SimpleDateFormat
 class RatesController {
 
     HttpService httpService
+    RatesService ratesService
 
     def index() {
         Configuration configuration = Configuration.current()
 
-        String url = "${configuration.baseUrl}?base="
+        if (!session.configuration) {
+            session.configuration = configuration
+        }
+
+        String url = "${configuration.baseUrl}/latest?base="
 
         if (params.base) {
             url += params.base
@@ -29,11 +34,11 @@ class RatesController {
             Currency currency = Currency.findByCode(it.key)
 
             if (currency) {
-                currency.value = it.value
+                currency.value = ratesService.markup(it.value)
                 rates.add(currency)
             }
         }
 
-        render(view: 'index', model: [base: base, date: date, rates: rates, configuration: Configuration.current()])
+        render(view: 'index', model: [base: base, date: date, rates: rates])
     }
 }

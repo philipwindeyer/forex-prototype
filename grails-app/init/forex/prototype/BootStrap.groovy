@@ -10,6 +10,7 @@ class BootStrap {
 
         // This is to match friendly names to those returned from the fixer API
         if (Currency.count() == 0) {
+            new Currency(name: "Dollar", country: "Australia", code: "AUD").save(failOnError: true)
             new Currency(name: "Lev", country: "Bulgaria", code: "BGN").save(failOnError: true)
             new Currency(name: "Real", country: "Brazil", code: "BRL").save(failOnError: true)
             new Currency(name: "Dollar", country: "Canada", code: "CAD").save(failOnError: true)

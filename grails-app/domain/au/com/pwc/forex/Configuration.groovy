@@ -5,6 +5,8 @@ class Configuration {
     String baseUrl
     BigDecimal markup
 
+    static transients = ['markupAsPercent']
+
     static current() {
         Configuration configuration = Configuration.first()
 
@@ -13,5 +15,9 @@ class Configuration {
         }
 
         return configuration
+    }
+
+    String getMarkupAsPercent() {
+        return "${markup * 100}%"
     }
 }

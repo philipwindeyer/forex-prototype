@@ -8,4 +8,9 @@ class Currency {
     transient BigDecimal value
 
     static transients = ['value']
+
+    @Override
+    String toString() {
+        return "${country}: $code (${name})"
+    }
 }

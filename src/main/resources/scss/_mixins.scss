@@ -37,20 +37,3 @@
     @content;
   }
 }
-
-// Border Radius
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-
-  -webkit-border-top-left-radius: $radius;
-  -webkit-border-top-right-radius: $radius;
-  -moz-border-radius-topright: $radius;
-  -moz-border-radius-topleft: $radius;
-  -webkit-border-bottom-left-radius: $radius;
-  -webkit-border-bottom-right-radius: $radius;
-  -moz-border-radius-bottomright: $radius;
-  -moz-border-radius-bottomleft: $radius;
-  border-radius: $radius;
-}

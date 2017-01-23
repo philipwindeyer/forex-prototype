@@ -12,7 +12,7 @@
 
     <p>As on: ${date}</p>
 
-    <pre>Note: These rates include the standard "Dispatch" markup of ${configuration.markup * 100}%</pre>
+    <pre>Note: These rates include the standard "Dispatch" markup of ${session.configuration.markup * 100}%</pre>
 
     <table class="table table-bordered table-hover">
         <thead>

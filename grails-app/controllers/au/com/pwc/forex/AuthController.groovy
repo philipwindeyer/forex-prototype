@@ -50,12 +50,11 @@ class AuthController {
         user.verified = true
         user.save()
 
-        render(view: 'complete')
+        redirect(controller: 'transfer', action: 'index', params: [newreg: true])
     }
 
     def logout() {
         session.user = null
-        session.invalidate()
         redirect(uri: '/')
     }
 }

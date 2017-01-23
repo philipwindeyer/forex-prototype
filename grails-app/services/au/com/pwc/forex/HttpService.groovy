@@ -1,6 +1,5 @@
 package au.com.pwc.forex
 
-import grails.transaction.Transactional
 import groovy.json.JsonSlurper
 import org.apache.http.HttpException
 import org.apache.http.HttpResponse
@@ -8,7 +7,6 @@ import org.apache.http.client.HttpClient
 import org.apache.http.client.methods.HttpGet
 import org.apache.http.impl.client.HttpClientBuilder
 
-@Transactional
 class HttpService {
 
     def get(String url) {

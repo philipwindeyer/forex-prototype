@@ -7,10 +7,10 @@
   margin-top: 64px;
   text-align: center;
 
-  padding-bottom: 42px;
+  padding-bottom: 64px;
 
   @include media(sm) {
-    padding-bottom: 46px;
+    padding-bottom: 68px;
   }
 
   h1 {
@@ -28,5 +28,16 @@
 
   .ico-lg {
     font-size: 72px;
+  }
+
+  .box-info {
+    padding: 8px;
+    border: 1px solid #cac9c9;
+    background-color: #fff;
+    text-align: left;
+  }
+
+  .btn-danger {
+    color: #FFFFFF;
   }
 }
